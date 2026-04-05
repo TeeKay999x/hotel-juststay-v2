@@ -1,4 +1,3 @@
-import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import AboutSection from './components/AboutSection'
 import Footer from './components/Footer'
