@@ -61,7 +61,7 @@ const Rooms = () => {
               </div>
 
 
-              <button onClick={() => navigate('/booking', { state: { roomType: room.title } })} className="w-full p-3 bg-transparent border-2 border-solid border-[#ff6b00] text-[#ff6b00] font-bold rounded-[5px] cursor-pointer transition-all duration-300 hover:bg-[#ff6b00] hover:text-white">
+              <button onClick={() => navigate('/booking', { state: { roomType: room.title } })} smooth className="w-full p-3 bg-transparent border-2 border-solid border-[#ff6b00] text-[#ff6b00] font-bold rounded-[5px] cursor-pointer transition-all duration-300 hover:bg-[#ff6b00] hover:text-white">
                 Book Now
               </button>
             </div>
