@@ -19,14 +19,14 @@ const BookingModal = () => {
       form.current,
       'nDjzVE_79vgWAOHKM'
     )
-    .then(() => {
-      setStatus('success')
-      setIsSending(false)
-      form.current.reset()
-    }, (error) => {
-      setStatus('error')
-      setIsSending(false)
-    })
+      .then(() => {
+        setStatus('success')
+        setIsSending(false)
+        form.current.reset()
+      }, (error) => {
+        setStatus('error')
+        setIsSending(false)
+      })
   }
 
   return (
@@ -56,9 +56,18 @@ const BookingModal = () => {
               <input type="date" name="check_out" required className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none' />
             </div>
           </div>
+
           <div className='grid grid-cols-2 gap-6'>
-            <input type="number" name="adults" placeholder="Adults" min="1" defaultValue="1" className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none' />
-            <input type="number" name="children" placeholder="Children" min="0" defaultValue="0" className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none' />
+            <div className='space-y-2'>
+              <label className='text-[10px] font-bold text-slate-500 uppercase ml-2 tracking-widest'>Adults (18+)</label>
+              <input type="number" name="adults" placeholder="Adults" min="1" defaultValue="1" className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none focus:border-emerald-500 transition-all' />
+            </div>
+
+            <div className='space-y-2'>
+              <label className='text-[10px] font-bold text-slate-500 uppercase ml-2 tracking-widest'>Children</label>
+              <input type="number" name="children" placeholder="Children" min="0" defaultValue="0" className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none focus:border-emerald-500 transition-all' />
+            </div>
+
           </div>
           <textarea name="message" rows="4" placeholder="Special Requests" className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none resize-none'></textarea>
           <button type='submit' disabled={isSending} className='w-full bg-emerald-500 hover:bg-emerald-400 py-5 rounded-xl font-bold text-slate-950 transition-all cursor-pointer'>
