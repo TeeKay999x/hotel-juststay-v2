@@ -49,11 +49,11 @@ const BookingModal = () => {
           <div className='grid grid-cols-2 gap-6'>
             <div className='space-y-1'>
               <label className='text-[10px] text-slate-500 uppercase'>Check-In</label>
-              <input type="date" name="check_in" required className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none' />
+              <input type="date" min={new Date().toISOString().split("T")[0]} name="check_in" required className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none' />
             </div>
             <div className='space-y-1'>
               <label className='text-[10px] text-slate-500 uppercase'>Check-Out</label>
-              <input type="date" name="check_out" required className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none' />
+              <input type="date" min={new Date().toISOString().split("T")[0]} name="check_out" required className='w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-white outline-none' />
             </div>
           </div>
 
